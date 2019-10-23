@@ -79,12 +79,29 @@
             </el-checkbox-group>
           
           <el-checkbox-group v-model="form.qualification">
-            <el-checkbox v-for="item in checkList1" :key="item" :label="item">{{item}}</el-checkbox>
+            <el-checkbox label="身份证"></el-checkbox>
+            <el-checkbox label="学生证"></el-checkbox>
+            <el-checkbox label="健康证"></el-checkbox>
+            <el-checkbox label="上岗证"></el-checkbox>
+            <el-checkbox label="母婴护理师证"></el-checkbox>
+            <el-checkbox label="催乳师证"></el-checkbox>
+            <el-checkbox label="产后恢复证"></el-checkbox>
+            <el-checkbox label="助理家政管理师"></el-checkbox>
+            <el-checkbox label="家政管理师"></el-checkbox>
+            <el-checkbox label="高级家政管理师"></el-checkbox>
+            <!-- <el-checkbox v-for="item in checkList1" :key="item" :label="item">{{item}}</el-checkbox> -->
           </el-checkbox-group>
         </el-form-item>
         <el-form-item label="服务项目" :label-width="formLabelWidth" v-if="id!=1">
           <el-checkbox-group v-model="form.type">
-            <el-checkbox v-for="item in checkList2" :key="item" :label="item">{{item}}</el-checkbox>
+            <!-- <el-checkbox v-for="item in checkList2" :key="item" :label="item">{{item}}</el-checkbox> -->
+            <el-checkbox label="保姆"></el-checkbox>
+            <el-checkbox label="月嫂"></el-checkbox>
+            <el-checkbox label="钟点工"></el-checkbox>
+            <el-checkbox label="保洁"></el-checkbox>
+            <el-checkbox label="家电清洗"></el-checkbox>
+            <el-checkbox label="家具保养"></el-checkbox>
+            <el-checkbox label="新居开荒"></el-checkbox>
           </el-checkbox-group>
         </el-form-item>
         <el-form-item label="学历" :label-width="formLabelWidth" v-if="id!=true">
@@ -133,27 +150,7 @@
 </template>
 <script>
 import api from "../api/api";
-const option1 = [
-  "身份证",
-  "学生证",
-  "健康证",
-  "上岗证",
-  "母婴护理师证",
-  "催乳师证",
-  "产后恢复证",
-  "助理家政管理师",
-  "家政管理师",
-  "高级家政管理师"
-];
-const option2 = [
-  "保姆",
-  "月嫂",
-  "钟点工",
-  "保洁",
-  "家电清洗",
-  "家具保养",
-  "新居开荒"
-];
+
 export default {
   data() {
     return {
@@ -162,8 +159,6 @@ export default {
       tableData3: [],
       tableData4: [],
       list: [],
-      checkList1: option1,
-      checkList2: option2,
       dialogFormVisible: false,
       form: {
         img: "",
@@ -324,8 +319,13 @@ export default {
       });
     },
     add22() {
+<<<<<<< HEAD
       this.form.qualification=this.form.qualification.toString()
       this.form.type=this.form.type.toString()
+=======
+      this.form.qualification =this.form.qualification.toString();
+      this.form.type = this.form.type.toString();
+>>>>>>> 更改
       console.log(this.form);
       this.dialogFormVisible = false;
       this.axios({
