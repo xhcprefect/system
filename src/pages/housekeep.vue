@@ -319,13 +319,8 @@ export default {
       });
     },
     add22() {
-<<<<<<< HEAD
-      this.form.qualification=this.form.qualification.toString()
-      this.form.type=this.form.type.toString()
-=======
       this.form.qualification =this.form.qualification.toString();
       this.form.type = this.form.type.toString();
->>>>>>> 更改
       console.log(this.form);
       this.dialogFormVisible = false;
       this.axios({
