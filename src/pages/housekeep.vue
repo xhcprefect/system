@@ -69,15 +69,6 @@
           <el-input v-model="form.tel" auto-complete="off"></el-input>
         </el-form-item>
         <el-form-item label="资格认证" :label-width="formLabelWidth" v-if="id!=1">
-          
-              
-            <el-checkbox-group v-model="form.qualification">
-                
-                  
-              <el-checkbox v-for="item in checkList1"   :key="item" :label="item" v-model="item.checked">{{item}}</el-checkbox>
-             
-            </el-checkbox-group>
-          
           <el-checkbox-group v-model="form.qualification">
             <el-checkbox label="身份证"></el-checkbox>
             <el-checkbox label="学生证"></el-checkbox>
@@ -89,8 +80,8 @@
             <el-checkbox label="助理家政管理师"></el-checkbox>
             <el-checkbox label="家政管理师"></el-checkbox>
             <el-checkbox label="高级家政管理师"></el-checkbox>
-            <!-- <el-checkbox v-for="item in checkList1" :key="item" :label="item">{{item}}</el-checkbox> -->
-          </el-checkbox-group>
+             <el-checkbox v-for="item in checkList1" :key="item" :label="item">{{item}}</el-checkbox> -->
+           </el-checkbox-group>
         </el-form-item>
         <el-form-item label="服务项目" :label-width="formLabelWidth" v-if="id!=1">
           <el-checkbox-group v-model="form.type">
@@ -146,7 +137,7 @@
       </div>
     </el-dialog>
   </div>
-  <!-- img 图片路径 name 水站名称 score 水站评分 count 月销售量 likeNum 点赞人数 readNum 浏览量 address 地址 len 距离 des 商家信息 tel 电话 price 价格 -->
+ 
 </template>
 <script>
 import api from "../api/api";
