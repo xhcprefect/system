@@ -78,6 +78,9 @@
              
             </el-checkbox-group>
           
+          <el-checkbox-group v-model="form.qualification">
+            <el-checkbox v-for="item in checkList1" :key="item" :label="item">{{item}}</el-checkbox>
+          </el-checkbox-group>
         </el-form-item>
         <el-form-item label="服务项目" :label-width="formLabelWidth" v-if="id!=1">
           <el-checkbox-group v-model="form.type">
@@ -248,6 +251,24 @@ export default {
       this.dialogFormVisible = true;
       this.id = id;
       console.log(id);
+      this.form = {
+        img: "",
+        name: "",
+        age: "",
+        tel: "",
+        qualification: [],
+        type: [],
+        edu: "",
+        year: "",
+        vNum: "",
+        price: "",
+        city: "",
+        experience: "",
+        redNum: "",
+        likeNum: "",
+        len: "",
+        info: ""
+      };
     },
     xiu() {
       this.dialogFormVisible = false;
@@ -303,6 +324,8 @@ export default {
       });
     },
     add22() {
+      this.form.qualification=this.form.qualification.toString()
+      this.form.type=this.form.type.toString()
       console.log(this.form);
       this.dialogFormVisible = false;
       this.axios({
@@ -315,7 +338,7 @@ export default {
             message: res.data.info,
             type: "success"
           });
-          this.init1();
+          this.init2();
         } else {
         }
       });
