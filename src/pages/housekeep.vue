@@ -80,7 +80,6 @@
             <el-checkbox label="助理家政管理师"></el-checkbox>
             <el-checkbox label="家政管理师"></el-checkbox>
             <el-checkbox label="高级家政管理师"></el-checkbox>
-             <el-checkbox v-for="item in checkList1" :key="item" :label="item">{{item}}</el-checkbox> -->
            </el-checkbox-group>
         </el-form-item>
         <el-form-item label="服务项目" :label-width="formLabelWidth" v-if="id!=1">
